@@ -23,15 +23,14 @@ class Solution(object):
         :type strs: List[str]
         :rtype: str
         """
-        begin = datetime.datetime.now()
         if not strs:
             return ""
 
         for i in range(len(strs[0])):
             for string in strs[1:]:
-                if i >= len(string) or string[i] != strs[0][i]:
+                if i >= len(string) or string[i] != strs[0][i]:   #这个好理解一些，注意一下  i 得位置
                     return strs[0][:i]
-        return strs[0]
+        return strs[0]    #只有一个字符串得时候，就返回这个？？/
 
 
 

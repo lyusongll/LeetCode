@@ -9,7 +9,7 @@ class Solution:
             return 0
         index = 0
         for i in range(1, len(A)):
-            if A[index] != A[i]:
+            if A[index] != A[i]: #从第一个数开始，
                 index += 1
                 A[index] = A[i]
 

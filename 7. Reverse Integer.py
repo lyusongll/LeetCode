@@ -25,7 +25,7 @@
 
 def reverseInteger(n):
 
-    if n < 10:
+    if n < 0:
         return -reverseInteger(-n)
     x = 0
     while n>0:

@@ -27,6 +27,14 @@ class Solution(object):
         curr.next = l1 or l2
         return dummy.next
 
+		
+class Solution:
+    def mergeTwoLists(self, a, b):
+        if a and b:
+            if a.val > b.val:
+                a, b = b, a
+            a.next = self.mergeTwoLists(a.next, b)
+        return a or b
 
 if __name__ == "__main__":
     l1 = ListNode(0)
@@ -35,3 +43,6 @@ if __name__ == "__main__":
     l2 = ListNode (2)
     l2.next = ListNode(3)
     print(Solution().mergeTwoLists(l1, l2))
+	
+	
+	

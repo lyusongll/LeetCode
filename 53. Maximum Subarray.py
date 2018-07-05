@@ -8,8 +8,8 @@ class Solution(object):
             return max(nums)
         global_max, local_max = 0, 0
         for x in nums:
-            local_max = max(0, local_max + x)
-            global_max = max(global_max, local_max)
+            local_max = max(0, local_max + x)               #负数再加之前得最大值  肯定使最大值减小，所以得判断局部得最大值是不是负数
+            global_max = max(global_max, local_max)     
         return global_max
 
 
