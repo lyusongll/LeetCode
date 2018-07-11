@@ -8,7 +8,7 @@ class Solution(object):
             return False
 
         tmp = x
-        y = 0
+        y = 0.0
         while tmp:
             y = y*10 + tmp%10
             tmp = tmp/10
