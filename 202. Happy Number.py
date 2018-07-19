@@ -1,7 +1,7 @@
 class Solution:
 	def isHappy(self, n):
 		numSet = set()
-		while n != 1 and n not in numSet:
+		while n != 1 and n not in numSet:  #用来判断n是否已经计算guo
 			numSet.add(n)
 			sum = 0
 			while n:

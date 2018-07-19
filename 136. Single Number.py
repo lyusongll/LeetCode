@@ -11,3 +11,20 @@ def singleNumber2(self, nums):
     for num in nums:
         res ^= num
     return res
+    
+    
+class Solution:
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        dict ={}
+        for num in nums:
+            if num not in dict:
+                dict[num] =1
+            else:
+                dict[num] +=1
+        for key,value in  dict.items():
+            if value ==1:            
+                return key
